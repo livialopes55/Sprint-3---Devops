@@ -1,0 +1,35 @@
+### tests.http
+# Arquivo de testes CRUD para Filiais
+# Usar no VS Code com a extensão REST Client (humao.rest-client)
+
+@baseUrl = https://<NOME_WEBAPP>.azurewebsites.net/api/v1/filiais
+
+### GET - Listar filiais
+GET {{baseUrl}}
+
+### POST - Criar nova filial
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "nome": "Filial Norte",
+  "endereco": "Av. Norte, 123 - São Paulo/SP",
+  "capacidade": 120
+}
+
+### GET - Buscar filial por ID
+GET {{baseUrl}}/1
+
+### PUT - Atualizar filial
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "Filial Centro Atualizada",
+  "endereco": "Rua Principal, 1000 - São Paulo/SP",
+  "capacidade": 180
+}
+
+### DELETE - Excluir filial
+DELETE {{baseUrl}}/1
