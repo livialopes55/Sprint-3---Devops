@@ -2,16 +2,16 @@
 
 Repositório de entrega da disciplina **DevOps Tools & Cloud Computing**.
 
-## 🚀 Descrição da Solução
+## Descrição da Solução
 API RESTful em .NET 8 publicada no **Azure App Service (Linux)**, integrada ao **Azure SQL Database (PaaS)**.  
 Permite CRUD de **Filiais, Pátios e Motos** com Swagger disponível online.
 
-## ✅ Benefícios para o Negócio
+## Benefícios para o Negócio
 - Facilita o gerenciamento centralizado da frota.  
 - Escalável e disponível 24/7 na nuvem.  
 - Adoção de boas práticas DevOps (CI/CD simplificado via Azure CLI).  
 
-## 🛠️ Passos de Deploy (Azure CLI)
+## Passos de Deploy (Azure CLI)
 
 ```bash
 # Variáveis
@@ -48,12 +48,12 @@ az webapp deploy -g $RG -n $WEBAPP --src-path site.zip --type zip
 az webapp log tail -g $RG -n $WEBAPP
 ```
 
-## 📂 Estrutura do Repositório
+## Estrutura do Repositório
 - `script_bd.sql` → Criação e carga inicial do banco  
 - `tests.http` → Roteiro de testes CRUD (usar no VS Code com extensão REST Client)  
 - `README.md` → Este guia de deploy/teste
 
-## 🧪 Testes
+## Testes
 A API possui Swagger disponível em:
 ```
 https://<NOME_WEBAPP>.azurewebsites.net/swagger
@@ -63,13 +63,11 @@ Execute os endpoints manualmente ou use o arquivo `tests.http`.
 
 ---
 
-## 👨‍💻 Integrantes
-- Lucas Martins Soliman - RM 556281  
-- Diego Bassalo Canals Silva - RM 558710  
-- Pedro Henrique Jorge de Paula - RM 558833  
+## Integrantes
+-Lívia de Oliveira Lopes - RM556281  
 
 ---
 
-## 📎 Links Entrega
+## Links Entrega
 - Repositório GitHub: (adicione aqui o link)  
 - Vídeo no YouTube: (adicione aqui o link)
