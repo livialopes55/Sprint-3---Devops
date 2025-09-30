@@ -15,10 +15,11 @@ if (!string.IsNullOrWhiteSpace(conn) &&
     conn.Contains("database.windows.net", StringComparison.OrdinalIgnoreCase))
 {
     // Azure SQL
-    builder.Services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(conn));
-}
+    builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AzureSql")));
+
 else
-{
+    {
    
     var sqliteConn = string.IsNullOrWhiteSpace(conn)
         ? "Data Source=/home/site/wwwroot/app.db"
